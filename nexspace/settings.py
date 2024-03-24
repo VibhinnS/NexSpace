@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+SITE_ID=2
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,8 +40,23 @@ INSTALLED_APPS = [
     'questions',
     'tailwind',
     'theme',
-    'django_browser_reload'
+    'django_browser_reload',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "SCOPE": {
+            "profile",
+            "email"
+        },
+    "AUTH_PARAMS":{"access_type": "online"}
+    }
+}
 
 TAILWIND_APP_NAME = 'theme'
 
@@ -61,6 +76,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'nexspace.urls'
@@ -129,17 +145,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'theme/static/'
+STATIC_URL = 'static/'
 
-# MEDIA_URL = '/assets/'
+MEDIA_URL = '/assets/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backend.ModelBackend",
+    "allauth.accounts.auth_backends.AuthenticationBackend",
+)
+
+LOGIN_DIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"

@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,7 @@
     <title>nexSpace</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="static/stylesheets/style.css">
+    <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}">
     <style>
         #card1 {
             background-image: url('static/assets/images/cat_img.jpg');
@@ -26,6 +27,8 @@
             <h4>Real World Projects</h4>
             <h4>AI Interviewer</h4>
             <h4>Testimonials</h4>
+            <h4 style="color: #c161ff, font-weight: black,text-decoration: underline", onclick="window.location.href='{% url 'sign_in' %}'">Sign In</h4>
+            <h4 style="color: #c161ff, font-weight: black, text-decoration: underline", onclick="window.location.href='{% url 'sign_out' %}'">Sign Out</h4>
             <!-- <h4><a href="/users/sign_up">Sign Up</a></h4>
             <h4><a href="/users/sign_in">Sign In</a></h4> -->
         </div>
