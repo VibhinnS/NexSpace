@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>nexSpace</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/stylesheets/style.css">
+    <style>
+        #card1 {
+            background-image: url('static/assets/images/cat_img.jpg');
+        }
+        #card2 {
+            background-image: url('static/assets/images/dog_img.jpg');
+        }
+        #card3 {
+            background-image: url('static/assets/images/fight_img.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page-class">
+        <div id="nav">
+            <img src="static/assets/images/Asset 4.png">
+            <h4>Real World Projects</h4>
+            <h4>AI Interviewer</h4>
+            <h4>Testimonials</h4>
+            <!-- <h4><a href="/users/sign_up">Sign Up</a></h4>
+            <h4><a href="/users/sign_in">Sign In</a></h4> -->
+        </div>
+        <div id="cursor"></div>
+        <div id="cursor-blur"></div>
+        <video autoplay loop muted>
+            <source src="static/assets/videos/herovid.mp4" type="video/mp4">
+        </video>
+        <div id="main">
+            <div id="page1">
+                <h1>BUILD-DEPLOY-REPEAT</h1>
+                <a href="/questions">
+                    <button class="button" data-text="Awesome">
+                        <span class="actual-text" onclick="window.location.href='{% url 'questions' %}'">&nbsp;Explore&nbsp;</span>
+                        <span class="hover-text" aria-hidden="true">&nbsp;Explore&nbsp;</span>
+                    </button>
+                </a>
+            </div>
+            <div id="page2">
+                <div id="scroller">
+                    <div id="scroller-in">
+                        <h4>BREAK</h4>
+                        <h4>BUILD</h4>
+                        <h4>TINKER</h4>
+                        <h4>SHIP</h4>
+                    </div>
+                    <div id="scroller-in">
+                        <h4>BREAK</h4>
+                        <h4>BUILD</h4>
+                        <h4>TINKER</h4>
+                        <h4>SHIP</h4>
+                    </div>
+                </div>
+                <div id="cards-container">
+                    <div class="card" id="card1">
+                        <div class="overlay">
+                            <h4>EXPLORE</h4>
+                        </div>
+                    </div>
+                    <div class="card" id="card2">
+                        <div class="overlay">
+                            <h4>CREATE</h4>
+                        </div>
+                    </div>
+                    <div class="card" id="card3">
+                        <div class="overlay">
+                            <h4>COMPETE</h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="spacer"></div>
+                <div id="green-div">
+                    <h4>
+                        SIGN UP FOR LATEST CHALLENGES HERE!
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="static/javascript/script.js"></script>
+</body>
+</html>
