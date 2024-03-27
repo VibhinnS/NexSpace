@@ -1,8 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-from accounts.views import login_view, signup
-from sim.views import sign_in, sign_out, auth_receiver  # Import views from sim
 
 urlpatterns = [
     path('', views.landing_page, name="landing_page"),
