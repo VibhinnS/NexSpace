@@ -1,0 +1,43 @@
+{%load static%}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{%static 'stylesheets/auth.css'%}">
+    </head>
+    <body>
+        {% comment %} {%load socialaccount%} {% endcomment %}
+        <div class="ring">
+            <i style="--clr:#c161ff;"></i>
+            <i style="--clr:#c161ff;"></i>
+            <i style="--clr:#c161ff;"></i>
+            <div class="login">
+              <h2>Sign up</h2>
+              <div class="inputBx">
+                <input type="text" placeholder="Username">
+              </div>
+              <div class="inputBx">
+                <input type="password" placeholder="Password">
+              </div>
+              <div class="inputBx">
+                <input type="submit" value="Sign in">
+              </div>
+              {% comment %} <a href="{% provider_login_url 'google' %}?next=/">Login With Google</a> {% endcomment %}
+              <div class="links">
+                <a href="#">Forget Password</a>
+                <a href="#">Signup</a>
+              </div>
+            </div>
+          </div>                  
+        <script src="" async defer></script>
+    </body>
+</html>

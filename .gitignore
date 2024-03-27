@@ -1,2 +1,4 @@
-./Lib
+/Lib
+/Scripts
 /google_auth.json
+__pycache__/

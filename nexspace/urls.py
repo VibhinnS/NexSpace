@@ -1,15 +1,15 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import landing_page, question_list, sign_in, sign_out
-# from questions import views  # Remove this line if it's not needed
+from . import views
+from accounts.views import login_view, signup
+from sim.views import sign_in, sign_out, auth_receiver  # Import views from sim
 
 urlpatterns = [
-    path('', landing_page),
-    path('questions/', question_list, name="questions"),
+    path('', views.landing_page, name="landing_page"),
+    path("login", views.login, name="login"),
+    path("logout", views.logout, name="logout"),
+    path("callback", views.callback, name="callback"),
+    path('questions/', views.question_list, name="questions"),
     path('admin/', admin.site.urls),
-    path('sign-in/', sign_in, name="sign_in"),
-    path('sign-out/', sign_out, name="sign_out"),
-    path("accounts/", include("allauth.urls")),
-    # path("", include("users.urls")),  # Change "/" to "" if this is intended for root URL pattern
     path("__reload__/", include("django_browser_reload.urls")),
 ]
