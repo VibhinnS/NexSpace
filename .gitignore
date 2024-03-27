@@ -1,4 +1,4 @@
-/Lib
+/nexspace/__pycache__
+/Lib/site-packages
 /Scripts
-/google_auth.json
-__pycache__/
+/.env
