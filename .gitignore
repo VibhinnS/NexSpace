@@ -2,6 +2,6 @@
 /Lib/site-packages
 /Scripts
 /.env
-/lib*
-/bin*
-/include*
+/lib
+/bin
+/include
