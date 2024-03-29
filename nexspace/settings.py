@@ -97,6 +97,8 @@ WSGI_APPLICATION = 'nexspace.wsgi.application'
 #     }
 # }
 
+
+#for postgres external linkage
 import dj_database_url
 
 DATABASES = {
