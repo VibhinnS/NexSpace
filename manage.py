@@ -3,7 +3,7 @@
 import os
 import sys
 
-
+#hello world
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nexspace.settings')
