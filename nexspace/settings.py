@@ -145,7 +145,9 @@ if not DEBUG:    # Tell Django to copy static assets into a path called `staticf
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/assets/'
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
 
 # Default primary key field type
