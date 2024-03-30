@@ -128,7 +128,7 @@ body {
     display: inline-block;
     font-size: 140px;
     font-weight: 900;
-    font-family: 'montserrat';
+    font-family: 'roboto';
     margin-right: 80px;
     color: transparent;
     transition: all linear 0.3s;
@@ -211,7 +211,7 @@ body {
   #green-div h4 {
     width: 45%;
     line-height: 70px;
-    font-family: 'montserrat';
+    font-family: 'roboto';
     color: #c161ff;
     text-align: center;
     justify-content: center;
