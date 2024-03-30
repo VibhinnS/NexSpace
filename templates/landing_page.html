@@ -10,6 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sono:wght@200..800&display=swap" rel="stylesheet">
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '891187');
+    </script>
+    <!-- End MailerLite Universal -->
     <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}">
     <style>
         #card1 {
@@ -84,9 +93,7 @@
                 </div>
                 <div id="spacer"></div>
                 <div id="green-div">
-                    <h4>
-                        GET WEEKLY CODING CHALLENGES STRAIGHT TO YOUR INBOX!
-                    </h4>
+                    <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'fXIAGR', true)">Click here to show form</a>
                 </div>
             </div>
         </div>
